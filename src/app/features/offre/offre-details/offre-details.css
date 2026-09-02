@@ -1,0 +1,55 @@
+.details {
+    width: 50%;
+    margin: 30px auto;
+    background: #eee;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font: 30px bold;
+    color: brown;
+    text-align: center;
+    margin: 10px 0 25px 0;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+    align-items: start;
+
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.label {
+    font-weight: bold;
+    color: brown;
+}
+
+.value {
+    color: #333;
+}
+
+.back-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.back-link a {
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: brown;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}

@@ -1,0 +1,37 @@
+@if (offre()) {
+
+  <div class="details">
+
+    <h1>{{ offre()!.titre }}</h1>
+
+    <div class="detail-row">
+      <span class="label">Entreprise:</span>
+      <span class="value">{{ offre()!.entreprise }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Description:</span>
+      <span class="value">{{ offre()!.description }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Lieu:</span>
+      <span class="value">{{ offre()!.lieu }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Date Publication:</span>
+      <span class="value">{{ offre()!.date_publication }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Categorie:</span>
+      <span class="value">{{ offre()!.categorie }}</span>
+    </div>
+
+    <div class="back-link">
+      <a routerLink="/offre">Return to Offer List</a>
+    </div>
+
+  </div>
+}

@@ -1,0 +1,33 @@
+  <h1>List of offres</h1>
+   <div class="create-new">
+    <button   (click)="goToAdd()">
+      Add New offre
+    </button>
+  </div>
+@if (offres().length > 0) {
+
+  <div class="offre-table">
+
+    <div class="table-header">
+      <div>Titre</div>
+      <div>Entreprise</div>
+      <div>Lieu</div>
+      <div>Date Publication</div>
+  </div>
+    @for (offre of offres(); track offre.id) {
+
+      <app-offre-item
+        [offre]="offre"
+        (details)="goToDetails($event)" />
+    } 
+  </div>
+ 
+
+
+} @else {
+
+  <p>Aucun offre disponible.</p>
+
+}
+
+ 

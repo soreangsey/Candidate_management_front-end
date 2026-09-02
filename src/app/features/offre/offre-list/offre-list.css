@@ -1,0 +1,61 @@
+h1 {
+    font: 30px bold;
+    color: brown;
+    text-align: center;
+    margin: 10px;
+}
+
+.movie-table {
+    width: 80%;
+    margin: auto;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 220px 220px 180px 180px 120px;
+    gap: 10px;
+    align-items: center;
+
+    background: #eee;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.table-header {
+   width: 80%;
+   margin: auto;
+    color: brown;
+    display: grid;
+    grid-template-columns: 250px 350px 180px 180px 120px;
+    gap: 10px;
+    align-items: center;
+    background: #eee;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.create-new {
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: brown;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    align-content: flex-end;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
