@@ -2,7 +2,7 @@
 
 <form [formGroup]="offreForm" (ngSubmit)="addOffre()">
 
-  <div>
+  <div class="form-group">
     <label for="titre">Titre</label>
     <input id="titre" type="text" formControlName="titre">
 
@@ -11,7 +11,7 @@
     }
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="entreprise">Entreprise</label>
     <input id="entreprise" type="text" formControlName="entreprise">
 
@@ -20,33 +20,32 @@
     }
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="description">Description</label>
     <textarea id="description" formControlName="description"></textarea>
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="lieu">Lieu</label>
     <input id="lieu" type="text" formControlName="lieu">
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="date_publication">Date de publication</label>
     <input id="date_publication" type="date" formControlName="date_publication">
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="id_categorie">Catégorie</label>
 
     <select id="id_categorie" formControlName="id_categorie">
       <option value="">Choisir une catégorie</option>
 
       @for (categorie of categories(); track categorie.id) {
-        <option [value]="categorie.id">
+        <option [ngValue]="categorie.id">
           {{ categorie.nom }}
         </option>
       }
-
     </select>
 
     @if (offreForm.get('id_categorie')?.hasError('required') && offreForm.get('id_categorie')?.touched) {
@@ -54,6 +53,67 @@
     }
   </div>
 
-  <button type="submit">Ajouter</button>
+  <div class="form-actions">
+    <button type="submit">Ajouter</button>
+  </div>
+
+</form><h1>Ajouter une offre</h1>
+
+<form [formGroup]="offreForm" (ngSubmit)="addOffre()">
+
+  <div class="form-group">
+    <label for="titre">Titre</label>
+    <input id="titre" type="text" formControlName="titre">
+
+    @if (offreForm.get('titre')?.hasError('required') && offreForm.get('titre')?.touched) {
+      <p>Titre est obligatoire</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="entreprise">Entreprise</label>
+    <input id="entreprise" type="text" formControlName="entreprise">
+
+    @if (offreForm.get('entreprise')?.hasError('required') && offreForm.get('entreprise')?.touched) {
+      <p>Entreprise est obligatoire</p>
+    }
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="lieu">Lieu</label>
+    <input id="lieu" type="text" formControlName="lieu">
+  </div>
+
+  <div class="form-group">
+    <label for="date_publication">Date de publication</label>
+    <input id="date_publication" type="date" formControlName="date_publication">
+  </div>
+
+  <div class="form-group">
+    <label for="id_categorie">Catégorie</label>
+
+    <select id="id_categorie" formControlName="id_categorie">
+      <option value="">Choisir une catégorie</option>
+
+      @for (categorie of categories(); track categorie.id) {
+        <option [ngValue]="categorie.id">
+          {{ categorie.nom }}
+        </option>
+      }
+    </select>
+
+    @if (offreForm.get('id_categorie')?.hasError('required') && offreForm.get('id_categorie')?.touched) {
+      <p>Catégorie est obligatoire</p>
+    }
+  </div>
+
+  <div class="form-actions">
+    <button type="submit">Ajouter</button>
+  </div>
 
 </form>
